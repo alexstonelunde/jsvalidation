@@ -7,6 +7,10 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
 
+<script defer src="functions.js"></script>
+<script defer src="index.js"></script>
+
+
 <title>Form validation challenge</title>
 </head>
 <body>
@@ -14,7 +18,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				<h1>Form validation challenge</h1>
-				<form>
+				<form id="theForm">
 					<div class="form-group">
 						<label>Required field:</label>
 						<input type="text" class="form-control">
@@ -37,15 +41,15 @@
 					</div>
 					<div class="radio">
 						<strong>Not required:</strong><br>
-						<label><input type="radio" name="required" value="1"> Yes</label>
-						<label><input type="radio" name="required" value="0"> No</label>
+						<label><input type="radio" class="form-control" class="radio1" name="required" value="1"> Yes</label>
+						<label><input type="radio" class="form-control" class="radio2" name="required" value="0"> No</label>
 					</div>
 					<div class="form-group">
 						<label>Required if above field is Yes:</label>
 						<input type="text" class="form-control">
 					</div>
 					<div class="form-group">
-						<input type="submit" class="btn btn-success" value="Validate!">
+						<input type="submit" class="btn" value="Validate!">
 					</div>
 					<div id="optional">
 						<h4>Optional</h4>
@@ -54,6 +58,8 @@
 							<input type="email" class="form-control">
 						</div>
 					</div>
+
+					<div id="errorsContainer"></div>
 				</form>
 			</div>
 		</div>
